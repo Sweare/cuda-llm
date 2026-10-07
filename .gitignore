@@ -5,3 +5,4 @@ __pycache__/
 *.nsys-rep
 build/
 vadd
+.venv/
