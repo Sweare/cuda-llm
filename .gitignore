@@ -1,0 +1,7 @@
+__pycache__/
+*.o
+*.so
+*.ncu-rep
+*.nsys-rep
+build/
+vadd
