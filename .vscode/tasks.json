@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "CUDA: build & run current file",
+      "type": "shell",
+      "command": "nvcc -arch=native -O3 -lineinfo -I${workspaceFolder}/include '${file}' -o '${fileDirname}/${fileBasenameNoExtension}' -lcublas && '${fileDirname}/${fileBasenameNoExtension}'",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": {
+        "owner": "nvcc",
+        "fileLocation": ["relative", "${workspaceFolder}"],
+        "pattern": {
+          "regexp": "^(.*)\\((\\d+)\\): (error|warning)(?: #\\S+)?: (.*)$",
+          "file": 1, "line": 2, "severity": 3, "message": 4
+        }
+      }
+    }
+  ]
+}

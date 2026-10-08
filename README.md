@@ -14,3 +14,8 @@ Custom CUDA kernels for fast batch-size-1 LLM decoding on a consumer GPU.
 - [ ] GEMV (fp16, int8)
 - [ ] Decode attention
 - [ ] End-to-end model + benchmarks vs PyTorch / vLLM
+
+ ncu --section SpeedOfLight --section LaunchStats --section MemoryWorkloadAnalysis  /path
+
+ cr /path
+ crp /path
